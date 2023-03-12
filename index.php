@@ -88,6 +88,8 @@
       });
     }
 
+    pretrazi(0);
+
   </script>
 
 </body>

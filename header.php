@@ -22,9 +22,6 @@
                 <a class="nav-link" href="index.php">Pocetna </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="sortiranje.php">Sortiranje po ceni</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="administracija.php">Administracija</a>
               </li>
             </ul>
