@@ -35,19 +35,14 @@
         </h2>
       </div>
 
-      <ul class="filters_menu">
-        <li class="active" data-filter="*">All</li>
-        <li data-filter=".burger">Burger</li>
-        <li data-filter=".pizza">Pizza</li>
-        <li data-filter=".pasta">Pasta</li>
-        <li data-filter=".fries">Fries</li>
+      <ul class="filters_menu" id="pretraga">
+        
       </ul>
 
       <div class="filters-content">
-        <div class="row grid">
+        <div id="rezultat" class="row">
           
         </div>
-      </div>
     </div>
   </section>
 
@@ -65,6 +60,34 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
   <script src="js/custom.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+
+  <script>
+      function popuniPretragu(){
+        $.ajax(
+          {
+            url: "popuniMarke.php",
+            success: function(result){
+            $("#pretraga").html(result);
+        }
+      });
+    }
+
+    popuniPretragu();
+
+    function pretrazi(id){
+      $.ajax(
+          {
+            url: "pretraga.php",
+            data: {
+              id : id
+            },
+            success: function(result){
+            $("#rezultat").html(result);
+        }
+      });
+    }
+
   </script>
 
 </body>
